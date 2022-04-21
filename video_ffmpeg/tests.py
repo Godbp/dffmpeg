@@ -4,10 +4,15 @@ from django.test import TestCase
 
 import requests
 
+
 def test_upload_video():
     url = 'http://127.0.0.1:8000/upload'
-    files = {'file': open('home/pengbo/视频/001.mp4', 'rb')}
+    files = {'file': open('/home/pengbo/001.mp4', 'rb')}
 
-    response = requests.post(url, files=files, data=data)
+    response = requests.post(url, files=files)
     json = response.json()
     print(json)
+
+
+if __name__ == "__main__":
+    test_upload_video()

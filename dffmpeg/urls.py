@@ -19,5 +19,5 @@ import video_ffmpeg.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("video/", include(video_ffmpeg.urls))
+    path("video/", include(video_ffmpeg.urls, namespace="video"))
 ]
