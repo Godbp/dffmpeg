@@ -13,6 +13,13 @@ def test_upload_video():
     json = response.json()
     print(json)
 
+def test_to_gif_test():
+    url = 'http://127.0.0.1:8000/video/to_gif'
+    files = {'file': open('/Users/pengbo/Desktop/屏幕录制2023-07-31 17.12.43.mov', 'rb')}
+
+    response = requests.post(url, files=files)
+    json = response.json()
+    print(json)
 
 if __name__ == "__main__":
-    test_upload_video()
+    test_to_gif_test()
